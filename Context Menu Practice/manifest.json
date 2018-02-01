@@ -1,11 +1,18 @@
 {
-  "name": "Right-click menu sample",
-  "description": "sample",
-  "version": "0.0.1",
-  "permissions": ["contextMenus"],
-  "background": {
-    "persistent": false,
-    "scripts": ["background.js"]
-  },
-  "manifest_version": 2
+    "name": "Right click contextmenu practice",
+    "version": "1",
+    "manifest_version": 2,
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "browser_action": {
+      "default_title": "Some tooltip",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "contextMenus"
+    ],
+    "icons": {
+      "16": "icon16.png"
+    }
 }
