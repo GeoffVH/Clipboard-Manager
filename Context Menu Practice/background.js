@@ -1,11 +1,8 @@
-function getword(info,tab) {
-  console.log("Word " + info.selectionText + " was clicked.");
-  chrome.tabs.create({  
-    url: "http://www.google.com/search?q=" + info.selectionText,
-  });           
-}
+chrome.contextMenus.removeAll();
 chrome.contextMenus.create({
-  title: "Search: %s", 
-  contexts:["selection"], 
-  onclick: getword,
+      title: "first",
+      contexts: ["browser_action"],
+      onclick: function() {
+        alert('first');
+      }
 });
