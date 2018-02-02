@@ -1,9 +1,20 @@
 rightClickHandler = function(){ 
     console.log("Right click registered, function activated");
+
+    textToClipboard("Hello world!")
     chrome.tabs.executeScript({
         code: "document.execCommand('paste');"
     });
 };
+
+function textToClipboard (text) {
+    var userString = document.createElement("textarea");
+    document.body.appendChild(userString);
+    userString.value = text;
+    userString.select();
+    document.execCommand("copy");
+    document.body.removeChild(userString);
+}
 
 chrome.contextMenus.create({
   title: "Editable thingy",
