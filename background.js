@@ -1,13 +1,16 @@
 rightClickHandler = function(){ 
     console.log("Right click registered, function activated");
+    copyToClipboard("Hello world!");
+    pastFromClipboard();
+}
 
-    textToClipboard("Hello world!")
+function pastFromClipboard(){
     chrome.tabs.executeScript({
         code: "document.execCommand('paste');"
     });
-};
+}
 
-function textToClipboard (text) {
+function copyToClipboard (text) {
     var userString = document.createElement("textarea");
     document.body.appendChild(userString);
     userString.value = text;
