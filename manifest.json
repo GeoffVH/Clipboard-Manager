@@ -10,8 +10,9 @@
       "default_popup": "popup.html"
     },
     "permissions": [
-      "contextMenus"
+      "contextMenus", "input", "activeTab", "clipboardRead", "clipboardWrite", "tabs"
     ],
+
     "icons": {
           "16": "icon.png"
     }

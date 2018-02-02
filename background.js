@@ -1,5 +1,8 @@
-rightClickHandler = function(){
-  //Do  stuff over that selected context menu
+rightClickHandler = function(){ 
+    console.log("Right click registered, function activated");
+    chrome.tabs.executeScript({
+        code: "document.execCommand('paste');"
+    });
 };
 
 chrome.contextMenus.create({
@@ -10,12 +13,12 @@ chrome.contextMenus.create({
 
 chrome.contextMenus.create({
   title: "Next Link",
-  contexts:["link","editable"],  // ContextType
-  onclick: rightClickHandler // A callback function
+  contexts:["link","editable"], 
+  onclick: rightClickHandler 
 });
 
 chrome.contextMenus.create({
   title: "Last final Link",
-  contexts:["link","selection"],  // ContextType
-  onclick: rightClickHandler // A callback function
+  contexts:["link","selection"],  
+  onclick: rightClickHandler 
 });
