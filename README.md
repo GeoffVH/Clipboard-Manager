@@ -10,7 +10,7 @@ Currently in progress.
 - [X] Unit test: register a click
 - [X] Unit test: function to paste from the clipboard
 - [X] Unit test: function to input text into the clipboard
-- [ ] Application home screen with unconnected inputs
+- [X] Application home screen with unconnected inputs
 - [ ] Impliment pre-made storage of text
 - [ ] Unit test: Function that allows user modifications to storage.
 - [ ] All core parts learned, design code architecture following OOP practices. 
