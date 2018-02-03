@@ -14,4 +14,4 @@ Currently in progress.
 - [ ] Impliment pre-made storage of text
 - [ ] Unit test: Function that allows user modifications to storage.
 - [ ] All core parts learned, design code architecture following OOP practices. 
-- [ ] Polish
+- [ ] Polish MVP
