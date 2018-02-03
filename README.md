@@ -13,5 +13,8 @@ Currently in progress.
 - [X] Application home screen with unconnected inputs
 - [ ] Impliment pre-made storage of text
 - [ ] Unit test: Connect storage to homescreen.
+- [ ] Unit test: Dynamically change the context menu items based on number of text slots taken. 
 - [ ] All core parts learned, design code architecture following OOP practices. 
 - [ ] Polish MVP
+- [ ] Create "Add item" button on homescreen and have inputs dynamically appear on click.
+- [ ] Create a remove item button next to the inputs. 
