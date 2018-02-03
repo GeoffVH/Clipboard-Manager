@@ -8,7 +8,7 @@ Currently in progress.
 
 - [x] Unit test: display contex menu
 - [X] Unit test: register a click from the context menu
-- [X] Unit test: function to paste from the clipboard
+- [X] Unit test: function to paste from the clipboard on selected textbox
 - [X] Unit test: function to input text into the clipboard
 - [X] Application home screen with unconnected inputs
 - [ ] Impliment pre-made storage of text
