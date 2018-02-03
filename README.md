@@ -12,6 +12,6 @@ Currently in progress.
 - [X] Unit test: function to input text into the clipboard
 - [X] Application home screen with unconnected inputs
 - [ ] Impliment pre-made storage of text
-- [ ] Unit test: Function that allows user modifications to storage.
+- [ ] Unit test: Connect storage to homescreen.
 - [ ] All core parts learned, design code architecture following OOP practices. 
 - [ ] Polish MVP
