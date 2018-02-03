@@ -8,10 +8,10 @@ Currently in progress.
 
 # Roadmap 
 
-- [x] **Unit test:** display contex menu
-- [X] **Unit test:** register a click from the context menu
-- [X] **Unit test:** function to paste from the clipboard on selected textbox
-- [X] **Unit test:** function to input text into the clipboard
+- [x] **Unit test:** Display contex menu
+- [X] **Unit test:** Register a click from the context menu
+- [X] **Unit test:** Function to paste from the clipboard on selected textbox
+- [X] **Unit test:** Function to input text into the clipboard
 - [X] Create application home screen with unconnected inputs
 - [X] **Unit test:** Register text in textbox
 - [X] **Unit test:** Overwrite promt text on textboxes
