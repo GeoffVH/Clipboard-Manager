@@ -8,15 +8,15 @@ Currently in progress.
 
 # Roadmap 
 
-- [x] Unit test: display contex menu
-- [X] Unit test: register a click from the context menu
-- [X] Unit test: function to paste from the clipboard on selected textbox
-- [X] Unit test: function to input text into the clipboard
-- [X] Application home screen with unconnected inputs
-- [X] Unit test: Register text in textbox
-- [X] Unit test: Overwrite promt text on textboxes
-- [X] Unit test: Store or get a value from popup.js into local storage
-- [ ] Unit test: Overwrite prompt text on textboxes from local storage on startup. 
+- [x] *Unit test:* display contex menu
+- [X] *Unit test:* register a click from the context menu
+- [X] *Unit test:* function to paste from the clipboard on selected textbox
+- [X] *Unit test:* function to input text into the clipboard
+- [X] Create application home screen with unconnected inputs
+- [X] *Unit test:* Register text in textbox
+- [X] *Unit test:* Overwrite promt text on textboxes
+- [X] *Unit test:* Store or get a value from popup.js into local storage
+- [ ] *Unit test:* Overwrite prompt text on textboxes from local storage on startup. 
 - [ ] Design code architecture following OOP practices from everything learned in the unit tests.
 - [ ] Create MVP.
 - [ ] Create "Add item" button on homescreen and have inputs dynamically appear on click.
