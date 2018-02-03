@@ -2,7 +2,7 @@
 Addon created to speed up job forum applications. 
 (And also to let me practice coding)
 
-This addon allows the user to input text (Address, Email, ect) and paste that text directly on input fields from the context menu. It will use the clipboard directly, bypassing application forums that do not allow auto-fill.
+This addon allows the user to input text on the extention's options (Address, Email, ect) and paste that text directly on input fields using the right click menu. It will use the copy-paste clipboard directly, bypassing application forums that do not allow auto-fill.
 
 Currently in progress.
 
