@@ -4,7 +4,7 @@
 	"description": "Quick multi-paste tool from your contex menu.",
 	"version": "1.0",
 	"permissions": [
-		"contextMenus", "input", "activeTab", "clipboardRead", "clipboardWrite", "tabs"
+		"contextMenus", "activeTab", "clipboardRead", "clipboardWrite", "tabs", "storage"
 	],
 	"background": {
       "scripts": ["background.js"]
