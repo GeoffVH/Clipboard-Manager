@@ -8,6 +8,7 @@ Currently in progress.
 
 # Innitial Architecture
 
+<img src="https://imgur.com/BQkVcsW">
 
 # Roadmap 
 
