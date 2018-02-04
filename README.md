@@ -6,6 +6,9 @@ This addon allows the user to input text on the extention's options (Address, Em
 
 Currently in progress.
 
+# Innitial Architecture
+
+
 # Roadmap 
 
 - [x] **Unit test:** Display contex menu
