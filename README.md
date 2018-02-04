@@ -6,7 +6,7 @@ This addon allows the user to input text on the extention's options (Address, Em
 
 Currently in progress.
 
-# Innitial Architecture
+# Initial Architecture
 
 <img src="https://i.imgur.com/BQkVcsW.png?1">
 
@@ -23,7 +23,7 @@ Currently in progress.
 - [X] **Unit test:** Overwrite prompt text on textboxes from local storage on startup.  
 - [X] **Unit test:** Futureproof above unit to handle any amount of rows.  
   -***Restriction:*** elementID's need to be grouped in one array at the start following a specific pattern.
-- [ ] Brainstorm code architecture following OOP practices from everything learned in the unit tests. Graph it out. 
+- [X] Brainstorm code architecture following OOP practices from everything learned in the unit tests. Graph it out. 
 - [ ] Code MVP.
 - [ ] Create "Add item" button on homescreen and have inputs dynamically appear on click.
 - [ ] Dynamically change the context menu items based on number of text slots taken.
