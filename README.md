@@ -17,7 +17,8 @@ Currently in progress.
 - [X] **Unit test:** Overwrite promt text on textboxes
 - [X] **Unit test:** Store or get a value from popup.js into local storage
 - [X] **Unit test:** Overwrite prompt text on textboxes from local storage on startup.  
-- [X] **Unit test:** Futureproof above unit to handle any amount of text. (Sort of done. Restriction: elementID's need to be grouped in one array at the start following a specific pattern.)
+- [X] **Unit test:** Futureproof above unit to handle any amount of rows.  
+  - (Sort of done. Restriction: elementID's need to be grouped in one array at the start following a specific pattern.)
 - [ ] Design code architecture following OOP practices from everything learned in the unit tests.
 - [ ] Create MVP.
 - [ ] Create "Add item" button on homescreen and have inputs dynamically appear on click.
