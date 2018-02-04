@@ -1,6 +1,9 @@
-rightClickHandler = function(){ 
+//On recive message, change the title names of 
+
+
+rightClickHandler = function(text){ 
     console.log("Right click registered, function activated");
-    copyToClipboard("Hello world!");
+    copyToClipboard(text);
     pastFromClipboard();
 }
 
@@ -20,19 +23,19 @@ function copyToClipboard (text) {
 }
 
 chrome.contextMenus.create({
-  title: "Editable thingy",
-  contexts:["link","editable"],  // ContextType
-  onclick: rightClickHandler // A callback function
+  title: "placehold 1",
+  contexts:["editable"],  // ContextType
+  onclick: rightClickHandler(title)  // A callback function
 });
 
 chrome.contextMenus.create({
-  title: "Next Link",
-  contexts:["link","editable"], 
-  onclick: rightClickHandler 
+  title: "placeholder 2",
+  contexts:["editable"], 
+  onclick: rightClickHandler(title) 
 });
 
 chrome.contextMenus.create({
-  title: "Last final Link",
-  contexts:["link","selection"],  
-  onclick: rightClickHandler 
+  title: "Placeholder 3",
+  contexts:["editable"],  
+  onclick: rightClickHandler(title)  
 });

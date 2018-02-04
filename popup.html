@@ -43,10 +43,15 @@
 			</table>
 
 			<div>
-				<p id='result'></p></div>
+				<p id='debug'></p></div>
 			</div>
 
 		</section>
-		<script src="popup.js"></script>
+		<script src="popup.js">
+			function load() {
+				console.log("load event detected!");
+			}
+			window.onload = load;
+		</script>
 	</body>
 </html>
