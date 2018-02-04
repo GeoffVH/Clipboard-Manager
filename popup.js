@@ -23,17 +23,15 @@ window.onload = function() {
 };
 
 //Replaces all text fields to generic values.
-//TO DO - experiment with chrome.storage.local.get({key: defaultValue}, function(value){/*...*/}); 
 function fill(textboxid, index, array){
     var rowGeneric = ["name", "text"];
     textboxid.defaultValue = rowGeneric[index%2];
 }
 
-//TO DO - create a function to get storage data, then use it to assign values to upToDate. 
 function refresh(textboxid, index, array){
-    var upToDate = ["name", "text"];
-    textboxid.defaultValue = upToDate[index%2];
+    textboxid.defaultValue = arrayAll[index];
 }
+
 
 //On apply changes button, update all text input in the popup. Send message that inputs have been changed.
 function FOO(){
