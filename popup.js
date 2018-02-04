@@ -23,6 +23,7 @@ window.onload = function() {
 };
 
 //Replaces all text fields to generic values.
+//TO DO - experiment with chrome.storage.local.get({key: defaultValue}, function(value){/*...*/}); 
 function fill(textboxid, index, array){
     var rowGeneric = ["name", "text"];
     textboxid.defaultValue = rowGeneric[index%2];
