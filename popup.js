@@ -16,7 +16,19 @@ var allElementIDs = [
         document.getElementById('name3'),
         document.getElementById('text3')
         ]
+var subButton = document.getElementById('ApplyChanges');
+subButton.addEventListener('click', applyButton, false); 
 
+//Update text input on button push
+function applyButton(){
+    allElementIDs.forEach(updateSnapshot);
+    saveData();
+}
+
+//Replaces snapshot with all text from user input
+function updateSnapshot(textboxid, index){
+    snapshot[index] = textboxid.value;
+}
 
 //Start point        
 window.onload = function() {
