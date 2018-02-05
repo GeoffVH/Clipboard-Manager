@@ -24,9 +24,9 @@ Currently in progress.
 - [X] **Unit test:** Futureproof above unit to handle any amount of rows.  
   -***Restriction:*** elementID's need to be grouped in one array at the start following a specific pattern.
 - [X] Brainstorm code architecture following OOP practices from everything learned in the unit tests. Graph it out. 
-- [ ] Code MVP.
+- [X] Code MVP.
  - - [x] popup.js
- - - [ ] background.js
+ - - [X] background.js
 - [ ] Create "Add item" button on homescreen and have inputs dynamically appear on click.
 - [ ] Dynamically change the context menu items based on number of text slots taken.
 - [ ] Create a remove item button next to the inputs. 
