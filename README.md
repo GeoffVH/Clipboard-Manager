@@ -9,7 +9,7 @@ Missing features: Dynamically changing context menu, ability to add/remove row.
 
 # Installation
 
-1) Download and unzip the repository into any folder on your local machine. 
+1) Download and unzip the repository into any location on your local machine. 
 2) Navigate to chrome://extensions on your chrome browser. (Alternatively, open chrome option -> More Tools -> Extensions) 
 3) Select the "Developer mode" checkmark on the top right hand of the page. 
 4) Select the "Load unpacked extension" button
