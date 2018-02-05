@@ -41,14 +41,11 @@ window.onload = function() {
 //Fills input text from storage
 function textHandler(){
     storage.get('key', function(obj) {
-        if(obj){ 
-            for (let i=0; i<allElementIDs.length; i++) {
+        if(obj) 
+            for (let i=0; i<allElementIDs.length; i++) 
                 Refresh(allElementIDs[i], i, obj.key[i] );
-              }
-            }      
-        else {
+        else 
             allElementIDs.forEach(Fill);
-        }
     });
 }
 
