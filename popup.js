@@ -1,4 +1,7 @@
 //Snapshot is a global variable that hosts an image of what storage looks like. 
+//As an array, each two elements connects to one row. 
+//Even index elements are Name values. 
+// Odd index elements are Text values. 
 var snapshot = [
         "Name",
         "Text",
@@ -7,7 +10,6 @@ var snapshot = [
         "Name",
         "Text",
         ]
-var storage = chrome.storage.local;
 var allElementIDs = [
         document.getElementById('name1'),
         document.getElementById('text1'),
@@ -16,6 +18,7 @@ var allElementIDs = [
         document.getElementById('name3'),
         document.getElementById('text3')
         ]
+var storage = chrome.storage.local;
 var subButton = document.getElementById('ApplyChanges');
 subButton.addEventListener('click', applyButton, false); 
 
