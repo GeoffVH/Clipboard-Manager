@@ -1,60 +1,65 @@
-//working with element ID's all in one array felt easier.
-//Likely going forward this array could be expanded or automated.
-//Current architecture can handle any size so long as it's in an array form like this. 
-var arrayAll =
-    [
-    document.getElementById('name1'),
-    document.getElementById('text1'),
-    document.getElementById('name2'),
-    document.getElementById('text2'),
-    document.getElementById('name3'),
-    document.getElementById('text3')
-    ]
+//Snapshot is a global variable that hosts an image of what storage looks like. 
+var snapshot = [
+        "Name",
+        "Text",
+        "Name",
+        "Text",
+        "Name",
+        "Text",
+        ]
+var storage = chrome.storage.local;
+var allElementIDs = [
+        document.getElementById('name1'),
+        document.getElementById('text1'),
+        document.getElementById('name2'),
+        document.getElementById('text2'),
+        document.getElementById('name3'),
+        document.getElementById('text3')
+        ]
 
-//On popup open searchs storage and populates the text fields with the previous inputs.
-//If local storage is empty, innitializes generic ones.  
+
+//Start point        
 window.onload = function() {
-    chrome.storage.local.get('textbox', function(data) {
-            if(data) 
-                arrayAll.forEach(refresh);           
-            else     
-                arrayAll.forEach(fill);
-    });
+    textHandler();
 };
 
-//Replaces all text fields to generic values.
-function fill(textboxid, index, array){
-    var rowGeneric = ["name", "text"];
-    textboxid.defaultValue = rowGeneric[index%2];
-}
-
-function refresh(textboxid, index, array){
-    textboxid.defaultValue = arrayAll[index];
-}
-
-
-//On apply changes button, update all text input in the popup. Send message that inputs have been changed.
-function FOO(){
-
-}
-
-
-//Practice code for referance 
-function getUserName() {
-    var nameField = document.getElementById('name1');
-    var nameField2 = document.getElementById('text1');
-    var debug = document.getElementById('debug');
-
-    nameField2.defaultValue = "TESTING INPUT OVERWRITE";
-    debug.textContent = 'Your username is: ' + nameField2.value;
-    chrome.storage.local.set({'textbox': nameField.value});
-
-    //Get is async. All code will have to be inside the call function. 
-    chrome.storage.local.get("textbox", function(getValue){
-        console.log("Get method sucessfull, obtained: " + getValue.textbox);
+//Fills input text from storage
+function textHandler(){
+    storage.get('key', function(obj) {
+        if(obj){ 
+            for (let i=0; i<allElementIDs.length; i++) {
+                Refresh(allElementIDs[i], i, obj.key[i] );
+              }
+            }      
+        else {
+            allElementIDs.forEach(Fill);
+        }
     });
 }
 
+//Replaces all text fields from data, and updates the snapshot.
+function Refresh(textboxid, i, str){
+    textboxid.defaultValue = str;
+    snapshot[i] = str;
+}
 
-var subButton = document.getElementById('ApplyChanges');
-subButton.addEventListener('click', getUserName, false); 
+//Replaces all text fields to generic values, saves them to storage, and updates the snapshot.
+function Fill(textboxid, index, array){
+    var rowGeneric = ["name", "text"];
+    textboxid.defaultValue = rowGeneric[index%2];
+    snapshot[index] = rowGeneric[index%2];
+    saveData();
+}
+
+//saves the current snapshot into storage.
+function saveData(){
+    storage.set( {'key' : snapshot} );
+}
+
+//prints storage data at index. 
+//NOTE: This function is async.
+function printData(index){
+    storage.get('key', function(obj) {
+        console.log(obj.key[index]);
+    });
+}
