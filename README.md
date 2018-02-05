@@ -4,7 +4,29 @@ Addon created to speed up job forum applications.
 
 This addon allows the user to input text on the extention's options (Address, Email, ect) and paste that text directly on input fields using the right click menu. It will use the copy-paste clipboard directly, bypassing application forums that do not allow auto-fill.
 
-Currently in progress.
+Minimum Viable Product complete. 
+Missing features: Dynamically changing context menu, ability to add/remove row.
+
+# Installation
+
+1) Download the repository into any folder on your local machine. 
+2) Open chrome://extensions on your chrome browser. 
+3) Select the "Developer mode" checkmark on the top right hand of the page. 
+4) Select the "Load unpacked extention" button
+5) Select the folder where you stored this repo. 
+
+# User's Guide
+
+Clicking on the popup menu button will open the extention's homepage. 
+<img src="https://i.imgur.com/RTrtOo5.png?1">
+
+Three rows are currently hardcoded into the MVP version of this extention. 
+On each row, the first text box is linked to your context menu.
+The second text box is the value that will be pasted on selecting the option.
+
+<img src="https://i.imgur.com/k9yl0Ff.png?1">
+
+
 
 # Initial Architecture
 
