@@ -32,7 +32,7 @@ The second text box is the value that will be pasted on selecting the option.
 
 <img src="https://i.imgur.com/BQkVcsW.png?1">
 
-# Roadmap 
+# Roadmap (Minimum Viable Product)
 
 - [x] **Unit test:** Display contex menu
 - [X] **Unit test:** Register a click from the context menu
@@ -49,6 +49,10 @@ The second text box is the value that will be pasted on selecting the option.
 - [X] Code MVP.
  - - [x] popup.js
  - - [X] background.js
-- [ ] Create "Add item" button on homescreen and have inputs dynamically appear on click.
-- [ ] Dynamically change the context menu items based on number of text slots taken.
+ 
+ # Roadmap (Final version)
+ 
+- [ ] Create "Add item" button on homescreen and have inputs dynamically appear on click.\
 - [ ] Create a remove item button next to the inputs. 
+- [ ] Replace hardcoded functions with generic variable functions. 
+- [ ] Dynamically change the context menu items based on number of text slots taken.
