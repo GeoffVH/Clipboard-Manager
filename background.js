@@ -5,6 +5,7 @@ var allNames = [
     "Default",
     ]
 
+//Initializes the context menu using data from storage. 
 function main(){
     storage.get('key', function(obj) {
         allNames[0] = obj.key[0];
@@ -14,6 +15,8 @@ function main(){
     });
 }
 
+//Creates each context menu item
+//These will be refactored into one generic function on the final version. 
 function createContexMenus(names){
     chrome.contextMenus.create({
         title: names[0],
@@ -34,6 +37,33 @@ function createContexMenus(names){
       });
 }
 
+//Row functions are directly tied to menu items. 
+//Each function will copy it's respective text from storage and paste it.
+//These will be refactored into one generic function on the final version. 
+row1 = function(){ 
+    storage.get('key', function(obj) {
+        text = obj.key[1]
+        copyToClipboard(text);
+        pastFromClipboard();
+    });
+}
+
+row2 = function(){ 
+    storage.get('key', function(obj) {
+        text = obj.key[3]
+        copyToClipboard(text);
+        pastFromClipboard();
+    });
+}
+
+row3 = function(){ 
+    storage.get('key', function(obj) {
+        text = obj.key[5]
+        copyToClipboard(text);
+        pastFromClipboard();
+    });
+}
+
 function pastFromClipboard(){
     chrome.tabs.executeScript({
         code: "document.execCommand('paste');"
@@ -47,32 +77,6 @@ function copyToClipboard (text) {
     userString.select();
     document.execCommand("copy");
     document.body.removeChild(userString);
-}
-
-row1 = function(){ 
-    storage.get('key', function(obj) {
-        text = obj.key[1]
-        copyToClipboard(text);
-        pastFromClipboard();
-    });
-}
-
-
-row2 = function(){ 
-    storage.get('key', function(obj) {
-        text = obj.key[3]
-        copyToClipboard(text);
-        pastFromClipboard();
-    });
-}
-
-
-row3 = function(){ 
-    storage.get('key', function(obj) {
-        text = obj.key[5]
-        copyToClipboard(text);
-        pastFromClipboard();
-    });
 }
 
 main();
