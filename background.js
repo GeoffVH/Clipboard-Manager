@@ -23,12 +23,13 @@ function addRow(name, text){
     chrome.contextMenus.create({
         title: name,
         contexts:["editable"],
-        onclick: function(){
+        onclick: function() { 
 			copyToClipboard(text);
-			pasteFromClipboard();
+			pasteFromClipboard(); 
 			} 
       });
 }
+			
 
 //Listens for the "Apply button" to be pushed. 
 chrome.runtime.onMessage.addListener(
