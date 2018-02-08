@@ -1,70 +1,43 @@
 var storage = chrome.storage.local;
-var allNames = [
-    "Default",
-    "Default",
-    "Default",
-    ]
 
 //Initializes the context menu using data from storage. 
+//This will be refactored in the final version
 function main(){
+    contextMenu();
+}
+
+//Creates context menu based on the current storage data.   
+function contextMenu(){
     storage.get('key', function(obj) {
-        allNames[0] = obj.key[0];
-        allNames[1] = obj.key[2];
-        allNames[2] = obj.key[4];
-        createContexMenus(allNames);
+		for( let i=0; i<obj.key.length; i+=2){
+			name = obj.key[i];
+			n = i+1;
+			text = obj.key[n];
+			addRow(name, text);
+		}
     });
 }
 
-//Creates each context menu item
-//These will be refactored into one generic function on the final version. 
-function createContexMenus(names){
+//Creates one row of the context menu and it's corresponding action to user click. 
+function addRow(name, text){
     chrome.contextMenus.create({
-        title: names[0],
+        title: name,
         contexts:["editable"],
-        onclick: row1 
-      });
-
-      chrome.contextMenus.create({
-        title: names[1],
-        contexts:["editable"], 
-        onclick: row2 
-      });
-      
-      chrome.contextMenus.create({
-        title: names[2],
-        contexts:["editable"],  
-        onclick: row3 
+        onclick: function(){
+			copyToClipboard(text);
+			pasteFromClipboard();
+			} 
       });
 }
 
-//Row functions are directly tied to menu items. 
-//Each function will copy it's respective text from storage and paste it.
-//These will be refactored into one generic function on the final version. 
-row1 = function(){ 
-    storage.get('key', function(obj) {
-        text = obj.key[1]
-        copyToClipboard(text);
-        pastFromClipboard();
-    });
-}
+//Listens for the "Apply button" to be pushed. 
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+	  
+  });
 
-row2 = function(){ 
-    storage.get('key', function(obj) {
-        text = obj.key[3]
-        copyToClipboard(text);
-        pastFromClipboard();
-    });
-}
 
-row3 = function(){ 
-    storage.get('key', function(obj) {
-        text = obj.key[5]
-        copyToClipboard(text);
-        pastFromClipboard();
-    });
-}
-
-function pastFromClipboard(){
+function pasteFromClipboard(){
     chrome.tabs.executeScript({
         code: "document.execCommand('paste');"
     });

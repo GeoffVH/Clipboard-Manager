@@ -1,5 +1,5 @@
 //Snapshot is a global variable that hosts an image of what storage looks like. 
-//As an array, each two elements connects to one row. 
+//As an array, every two elements connects to one row. E.G. snapshot[0] & snapshot[1] = the first row.
 //Even index elements are Name values. 
 // Odd index elements are Text values. 
 var snapshot = [
@@ -22,12 +22,18 @@ var storage = chrome.storage.local;
 var subButton = document.getElementById('ApplyChanges');
 subButton.addEventListener('click', applyButton, false); 
 
-//Update text input on button push
+//Update storage on "Apply changes" button push
 function applyButton(){
     allElementIDs.forEach(updateSnapshot);
     saveData();
 }
 
+
+function buttonPushed(){
+	chrome.runtime.sendMessage({button: "Button's been pushed, update the menu!"}, function(response) {
+		console.log("Message sent");
+	});
+}
 //Replaces snapshot with all text from user input
 function updateSnapshot(textboxid, index){
     snapshot[index] = textboxid.value;
@@ -36,14 +42,15 @@ function updateSnapshot(textboxid, index){
 //Start point        
 window.onload = function() {
     textHandler();
+	buttonPushed();
 };
 
-//Fills input text from storage
+//Fills input text from storage. NOTE: This function is async
 function textHandler(){
     storage.get('key', function(obj) {
         if(obj) 
             for (let i=0; i<allElementIDs.length; i++) 
-                Refresh(allElementIDs[i], i, obj.key[i] );
+                Refresh(allElementIDs[i], i, obj.key[i]);
         else 
             allElementIDs.forEach(Fill);
     });
@@ -63,12 +70,12 @@ function Fill(textboxid, index, array){
     saveData();
 }
 
-//saves the current snapshot into storage.
+//saves the current snapshot into actual storage.
 function saveData(){
     storage.set( {'key' : snapshot} );
 }
 
-//prints storage data at index. 
+//prints storage data at supplied index. 
 //NOTE: This function is async.
 function printData(index){
     storage.get('key', function(obj) {
