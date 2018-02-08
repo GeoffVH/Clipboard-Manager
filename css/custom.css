@@ -12,6 +12,7 @@ body {
 
 button {
 	  height: calc(3em + 1px);
+	  width: 125px;
 }
 /* Basic style tweaks */
 section { padding: 5px;}
