@@ -15,7 +15,7 @@ A quick multi-paste tool from your contex menu!
 
 # Initial Architecture
 
-<img src="https://i.imgur.com/BQkVcsW.png?1">
+<img src="https://i.imgur.com/HJ0KzyC.gif">
 
 # Roadmap (Minimum Viable Product)
 
