@@ -1,24 +1,25 @@
 var storage = chrome.storage.local;
 
-//Initializes the context menu using data from storage. 
-//This will be refactored in the final version
+//Start point
 function main(){
     contextMenu();
 }
 
 //Creates context menu based on the current storage data.   
 function contextMenu(){
-    storage.get('key', function(obj) {
-		for( let i=0; i<obj.key.length; i+=2){
-			name = obj.key[i];
-			n = i+1;
-			text = obj.key[n];
+	console.log("Starting context menu");
+	chrome.contextMenus.removeAll();
+    storage.get(null, function(store) {
+		console.log(store);
+		for(index in store){
+			var name = store[index][0];
+			var text = store[index][1]
 			addRow(name, text);
 		}
     });
 }
 
-//Creates one row of the context menu and it's corresponding action to user click. 
+//Creates one row of the context menu labeled "name" and assigns "text" as the string to paste.
 function addRow(name, text){
     chrome.contextMenus.create({
         title: name,
@@ -29,14 +30,6 @@ function addRow(name, text){
 			} 
       });
 }
-			
-
-//Listens for the "Apply button" to be pushed. 
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-	  
-  });
-
 
 function pasteFromClipboard(){
     chrome.tabs.executeScript({
@@ -54,3 +47,4 @@ function copyToClipboard (text) {
 }
 
 main();
+chrome.runtime.onMessage.addListener(contextMenu);

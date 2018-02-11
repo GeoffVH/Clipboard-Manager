@@ -1,11 +1,5 @@
-# Right-click-menu-paste
-Addon created to speed up job forum applications. 
-(And also to let me practice coding)
-
-This addon allows the user to input text on the extention's options (Address, Email, ect) and paste that text directly on input fields using the right click menu. It will use the copy-paste clipboard directly, bypassing application forums that do not allow auto-fill.
-
-Minimum Viable Product complete. 
-Missing features: Dynamically changing context menu, ability to add/remove row.
+# Clipboard Manager
+A quick multi-paste tool from your contex menu!
 
 # Installation
 
@@ -17,16 +11,7 @@ Missing features: Dynamically changing context menu, ability to add/remove row.
 
 # User's Guide
 
-Clicking on the popup menu button will open the extention's homepage. 
-<img src="https://i.imgur.com/RTrtOo5.png?1">
-
-Three rows are currently hardcoded into the MVP version of this extention. 
-On each row, the first text box is linked to your context menu.
-The second text box is the value that will be pasted on selecting the option.
-
-<img src="https://i.imgur.com/k9yl0Ff.png?1">
-
-
+<img src="blob:https://imgur.com/f9065ff0-1642-42aa-9f64-c49168eda61c">
 
 # Initial Architecture
 
@@ -54,5 +39,8 @@ The second text box is the value that will be pasted on selecting the option.
  
 - [x] Replace hardcoded functions with generic variable functions. 
 - [x] Dynamically change the context menu items.
-- [ ] Create an add item button and matching function.
-- [ ] Create a remove item button and matching function. 
+- [x] Create an add item button and matching function.
+- [x] Create a remove item button and matching function. 
+- [x] Design final HTML and CSS for popup.
+- [ ] Add custom image to header and popup icon.
+- [ ] re-create graph to show difference between theoretical innitial setup vs final setup.

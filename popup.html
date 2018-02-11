@@ -2,13 +2,13 @@
 <html>
 	<head>
 	    <meta charset="utf-8">
-		<meta name="description" content="Right click -> menu -> paste">
-		<meta name="Geoffrey Herz" content="STUFF">
+		<meta name="Description" content="Clipboard Manager">
+		<meta name="Geoffrey Herz" content="I made thingies not explode">
 		
 		<title>Using Twitter Bootstrap 4.0</title>
 		
 		<!-- Scripts -->
-		<script src="js/jquery-2.0.3.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		
 		<!-- Cascading Style Sheets -->
@@ -18,22 +18,15 @@
 	
 	<body>		
 	<section>
-		<table class="table">
-			</head><tr><th><center>Clipboard</center></th><th>Manager</th></tr></head>
-			<tbody>
-				<tr>
-					<td>
-					<input required='' type='text'><label alt='Menu name' placeholder='Menu name'></label></td>
-					<td><input required='' type='text'><label alt='Text pasted' placeholder='Text pasted'></label></td>
-					<td> <button type="button" class="btn btn-outline-primary">Remove Row</button></td>
-				</tr>
-			</tbody>
+		<table class="table" id="homescreen">
+			</head>
+				<tr><th colspan="2"><center>Clipboard Manager</center></tr>
+			</head>
 		</table>
-		
 	</section>
 		<script src="popup.js">
 			function load() {
-				console.log("load event detected!");
+				console.log("Popup is opened!");
 			}
 			window.onload = load;
 		</script>

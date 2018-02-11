@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
-	"name": "Right click -> menu -> Paste",
-	"description": "Quick multi-paste tool from your contex menu.",
-	"version": "1.0",
+	"name": "Clipboard Manager",
+	"description": "A quick multi-paste tool from your contex menu.",
+	"version": "2.0",
 	"permissions": [
 		"contextMenus", "activeTab", "clipboardRead", "clipboardWrite", "tabs", "storage"
 	],
