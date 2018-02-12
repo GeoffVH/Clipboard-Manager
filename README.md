@@ -11,11 +11,11 @@ A quick multi-paste tool from your contex menu!
 
 # User's Guide
 
-<img src="blob:https://imgur.com/f9065ff0-1642-42aa-9f64-c49168eda61c">
+<img src="https://i.imgur.com/HJ0KzyC.gif">
 
 # Initial Architecture
 
-<img src="https://i.imgur.com/HJ0KzyC.gif">
+<img src="https://i.imgur.com/BQkVcsW.png?1">
 
 # Roadmap (Minimum Viable Product)
 
