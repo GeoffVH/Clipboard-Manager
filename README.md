@@ -1,5 +1,5 @@
 # Clipboard Manager
-A quick multi-paste tool from your contex menu!
+A quick multi-paste tool from your context menu!
 
 # Installation
 
