@@ -7,7 +7,6 @@ function main(){
 
 //Creates context menu based on the current storage data.   
 function contextMenu(){
-	console.log("Starting context menu");
 	chrome.contextMenus.removeAll();
 	storage.get(null, function(store) {
 		console.log(store);
@@ -25,9 +24,9 @@ function addRow(name, text){
         title: name,
         contexts:["editable"],
         onclick: function() { 
-			copyToClipboard(text);
-			pasteFromClipboard(); 
-			} 
+		copyToClipboard(text);
+		pasteFromClipboard(); 
+		} 
       });
 }
 
