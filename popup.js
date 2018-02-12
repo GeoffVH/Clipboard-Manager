@@ -1,4 +1,4 @@
-//Array of arrays. Each subarray contains meta data on rows currently active on popup.
+//This array keeps track of all active rows
 //rowIDs[][0] = key used to store row data in the storage object. 
 //rowIDs[][1] = elementID of the row's name input field. 
 //rowIDs[][2] = elementID of the row's text input field.  
@@ -42,14 +42,14 @@ function recoverStorage(){
 //Generates an empty row[index] complete with all event hooks ready
 function generateRow(index){
 	var table = document.getElementById("homescreen");
-    var row = table.insertRow(-1);
-    var name = row.insertCell(-1);
-    var text = row.insertCell(-1);
+	var row = table.insertRow(-1);
+	var name = row.insertCell(-1);
+	var text = row.insertCell(-1);
 	var button = row.insertCell(-1);
-	
+
 	row.id = "row" +index;
-    name.innerHTML = '<tr><td><input id="name' + index +'"" required="" type="text"><label alt="Menu name" placeholder="Menu name"></label></td>';
-    text.innerHTML = '<td><input id="text' + index +'"" required="" type="text"><label alt="Text pasted" placeholder="Text pasted"></label></td>';
+	name.innerHTML = '<tr><td><input id="name' + index +'"" required="" type="text"><label alt="Menu name" placeholder="Menu name"></label></td>';
+	text.innerHTML = '<td><input id="text' + index +'"" required="" type="text"><label alt="Text pasted" placeholder="Text pasted"></label></td>';
 	button.innerHTML = '<td><button id="btn' + index +'"" type="button" class="btn btn-outline-secondary">Unassigned!</button></td></tr>';
 	updateRowIDs(index);
 	onTextInput(index);
@@ -85,10 +85,10 @@ function modifyData(){
 
 //given an array of two strings (items), places them into respective text inputs on row[index]
 function populateRow(items, index){
-		var name = document.getElementById('name'+ index);
-        var text = document.getElementById('text'+ index);	
-		name.defaultValue = items[0];
-		text.defaultValue = items[1];
+	var name = document.getElementById('name'+ index);
+	var text = document.getElementById('text'+ index);	
+	name.defaultValue = items[0];
+	text.defaultValue = items[1];
 }
 
 //Sets a button to either "Add row" or "Delete row" given the butonID and choice.
