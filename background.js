@@ -9,7 +9,6 @@ function main(){
 function contextMenu(){
 	chrome.contextMenus.removeAll();
 	storage.get(null, function(store) {
-		console.log(store);
 		for(index in store){
 			var name = store[index][0];
 			var text = store[index][1]
