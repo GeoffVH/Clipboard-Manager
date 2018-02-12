@@ -1,4 +1,4 @@
-//This array keeps track of all active rows
+//RowIDs is an array of arrays that keeps track of all active rows
 //rowIDs[][0] = key used to store row data in the storage object. 
 //rowIDs[][1] = elementID of the row's name input field. 
 //rowIDs[][2] = elementID of the row's text input field.  
