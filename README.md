@@ -13,10 +13,6 @@ A quick multi-paste tool from your context menu!
 
 <img src="https://i.imgur.com/HJ0KzyC.gif">
 
-# Initial Architecture
-
-<img src="https://i.imgur.com/BQkVcsW.png?1">
-
 # Roadmap (Minimum Viable Product)
 
 - [x] **Unit test:** Display contex menu
