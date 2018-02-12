@@ -9,14 +9,14 @@ function main(){
 function contextMenu(){
 	console.log("Starting context menu");
 	chrome.contextMenus.removeAll();
-    storage.get(null, function(store) {
+	storage.get(null, function(store) {
 		console.log(store);
 		for(index in store){
 			var name = store[index][0];
 			var text = store[index][1]
 			addRow(name, text);
 		}
-    });
+	});
 }
 
 //Creates one row of the context menu labeled "name" and assigns "text" as the string to paste.
