@@ -11,7 +11,7 @@ function contextMenu(){
 	storage.get(null, function(store) {
 		for(index in store){
 			var name = store[index][0];
-			var text = store[index][1]
+			var text = store[index][1];
 			addRow(name, text);
 		}
 	});
