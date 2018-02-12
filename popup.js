@@ -63,7 +63,7 @@ function updateRowIDs(index){
 	rowIDs.push(item);	
 }
 
-//Creates a listener for the text field that will automatically update Data.
+//Creates a listener for row[index]'s input fields
 function onTextInput(index){
 	$("#name"+index).on('change', modifyData);
 	$("#text"+index).on('change', modifyData);
