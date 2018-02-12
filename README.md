@@ -42,5 +42,3 @@ A quick multi-paste tool from your contex menu!
 - [x] Create an add item button and matching function.
 - [x] Create a remove item button and matching function. 
 - [x] Design final HTML and CSS for popup.
-- [ ] Add custom image to header and popup icon.
-- [ ] re-create graph to show difference between theoretical innitial setup vs final setup.
