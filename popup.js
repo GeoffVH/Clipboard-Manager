@@ -2,8 +2,7 @@
 //rowIDs[][0] = key used to store row data in the storage object. 
 //rowIDs[][1] = elementID of the row's name input field. 
 //rowIDs[][2] = elementID of the row's text input field.  
-var rowIDs = [
-];
+var rowIDs = [];
 var storage = chrome.storage.local;
 
 //Start point
