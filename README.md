@@ -3,11 +3,7 @@ A quick multi-paste tool from your contex menu!
 
 # Installation
 
-1) Download and unzip the repository into any location on your local machine. 
-2) Navigate to chrome://extensions on your chrome browser. (Alternatively, open chrome option -> More Tools -> Extensions) 
-3) Select the "Developer mode" checkmark on the top right hand of the page. 
-4) Select the "Load unpacked extension" button
-5) Select the unzipped folder where you stored this repo. 
+You can find the link to the clipboard Manager [on the Google Chrome Extensions page here!](https://chrome.google.com/webstore/detail/clipboard-manager/nbkennpkceegagofdjjfkglgcgapnfop?authuser=1)
 
 # User's Guide
 
