@@ -1,5 +1,5 @@
 # Clipboard Manager
-A quick multi-paste tool from your contex menu!
+A quick multi-paste tool from your context menu!
 
 # Installation
 
@@ -7,11 +7,7 @@ You can find the link to the clipboard Manager [on the Google Chrome Extensions 
 
 # User's Guide
 
-<img src="blob:https://imgur.com/f9065ff0-1642-42aa-9f64-c49168eda61c">
-
-# Initial Architecture
-
-<img src="https://i.imgur.com/BQkVcsW.png?1">
+<img src="https://i.imgur.com/HJ0KzyC.gif">
 
 # Roadmap (Minimum Viable Product)
 
@@ -38,5 +34,3 @@ You can find the link to the clipboard Manager [on the Google Chrome Extensions 
 - [x] Create an add item button and matching function.
 - [x] Create a remove item button and matching function. 
 - [x] Design final HTML and CSS for popup.
-- [ ] Add custom image to header and popup icon.
-- [ ] re-create graph to show difference between theoretical innitial setup vs final setup.
