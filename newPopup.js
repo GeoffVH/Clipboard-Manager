@@ -38,6 +38,7 @@ function initializeStorage(){
 	if(index==0){
 		generateRow(index);
 	}
+	//Last button by default must always be an add button.
 	setButton(index, "add");
 }
 
