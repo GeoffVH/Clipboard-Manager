@@ -1,43 +1,41 @@
 var storage = chrome.storage.local;
 
 //Start point
-function main(){
+function main() {
     contextMenu();
 }
 
 //Creates context menu based on the current storage data.   
-function contextMenu(){
-	console.log("Starting context menu");
-	chrome.contextMenus.removeAll();
+function contextMenu() {
+    chrome.contextMenus.removeAll();
     storage.get(null, function(store) {
-		console.log(store);
-		for(index in store){
-			var name = store[index][0];
-			var text = store[index][1]
-			addRow(name, text);
-		}
+        for (index in store) {
+            var name = store[index][0];
+            var text = store[index][1];
+            addRow(name, text);
+        }
     });
 }
 
 //Creates one row of the context menu labeled "name" and assigns "text" as the string to paste.
-function addRow(name, text){
+function addRow(name, text) {
     chrome.contextMenus.create({
         title: name,
-        contexts:["editable"],
-        onclick: function() { 
-			copyToClipboard(text);
-			pasteFromClipboard(); 
-			} 
-      });
+        contexts: ["editable"],
+        onclick: function() {
+            copyToClipboard(text);
+            pasteFromClipboard();
+        }
+    });
 }
 
-function pasteFromClipboard(){
+function pasteFromClipboard() {
     chrome.tabs.executeScript({
         code: "document.execCommand('paste');"
     });
 }
 
-function copyToClipboard (text) {
+function copyToClipboard(text) {
     var userString = document.createElement("textarea");
     document.body.appendChild(userString);
     userString.value = text;
