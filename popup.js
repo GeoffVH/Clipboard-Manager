@@ -1,7 +1,3 @@
-/*
-The MIT License (MIT)
-Copyright (c) 2018 Geoffrey Herz
-*/
 var storage = chrome.storage.local;
 var rowIDs = [];
 //This data construct is used to generate the storage object.
